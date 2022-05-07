@@ -6,9 +6,21 @@ body {
   
   background-attachment: fixed;
   background-size: cover;
-  background-position: center;
+  
+  background-origin: content-box;
 }
 
 a {
   color: #00B7FF;
+}
+
+.title {
+  font-size: 10em;
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .title {
+    font-size: 5em;
+  }
 }
