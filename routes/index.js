@@ -15,5 +15,19 @@ router.get('/movies', async (req, res, next) => {
         console.log(err)
     }
 })
+router.get('/movie/:id', async (req, res, next) =>{
+    const { id } = req.params
+    console.log("searching", id)
+    try{
+        const response = await MovieModel.findById(id)
+        res.render("movie", {
+            movie: response
+        })
+
+    }
+    catch(err){
+        console.log(err)
+    }
+})
 
 module.exports = router;
