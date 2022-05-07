@@ -14,7 +14,14 @@
             </li>
             {{/each}}
             <p>{{movie.description}}</p>
-            <p>{{movie.showtimes}}</p>
+            <p>
+            {{#each movie.showtimes}}
+            {{this}}
+            {{#unless @last}}
+            |
+            {{/unless}}
+            {{/each}}
+            </p>
         </div>
     </div>
 
